@@ -29,6 +29,15 @@ class InterfaceController: WKInterfaceController {
         
         map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Green)
     }
+    
+    /*
+    func zoom(value: Float) {
+        let degrees: CLLocationDegrees(10-value)/10
+        let span = MKCoordinateSpanMake(degrees, degrees)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region)
+    }
+*/
 
     @IBAction func zoomIn() {
         if(span.latitudeDelta>0.1) {
